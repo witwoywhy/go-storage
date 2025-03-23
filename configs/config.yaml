@@ -1,0 +1,15 @@
+storage:
+  aws-s3:
+    target: r2
+    bucketName: myBucketName
+    publicUrl: https://myBucketName.com
+    accessKey: access-key
+    secretKey: secret-key
+    endpoint: https://myBucketName.com
+    region: auto
+  azure-blob:
+    target: blob
+    bucketName: myBucketName
+    prefix: containerName
+    publicUrl: https://myBucketName.blob.core.windows.net
+    azureConnection: DefaultEndpointsProtocol=
