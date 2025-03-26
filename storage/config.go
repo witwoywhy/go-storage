@@ -43,6 +43,8 @@ func Init(key string) Storager {
 		return NewS3Storage(&config)
 	case "blob":
 		return NewAzureStorage(&config)
+	case "gcs":
+		return NewGcsStorage(&config)
 	default:
 		return nil
 	}

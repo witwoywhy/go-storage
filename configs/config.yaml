@@ -13,3 +13,12 @@ storage:
     prefix: containerName
     publicUrl: https://myBucketName.blob.core.windows.net
     azureConnection: DefaultEndpointsProtocol=
+  gcp-public:
+    target: gcs
+    bucketName: 
+    prefix: 
+    publicUrl: 
+    serviceAccount: |
+      {
+        
+      }

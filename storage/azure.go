@@ -42,7 +42,7 @@ func (a *azureStorage) GetUrl(filePath string) string {
 	return fmt.Sprintf("%s/%s/%s", a.publicUrl, a.prefix, filePath)
 }
 
-func (a *azureStorage) GetSingedUrl(ctx context.Context, filePath string, ttl time.Duration) (string, error) {
+func (a *azureStorage) GetSignedUrl(ctx context.Context, filePath string, ttl time.Duration) (string, error) {
 	bc := a.client.NewBlockBlobClient(filePath)
 	now := time.Now()
 	url, err := bc.GetSASURL(
