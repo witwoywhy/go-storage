@@ -71,7 +71,7 @@ func (s *s3Storage) GetUrl(filePath string) string {
 	return fmt.Sprintf("%s/%s", s.publicUrl, filePath)
 }
 
-func (s *s3Storage) GetSingedUrl(ctx context.Context, filePath string, ttl time.Duration) (string, error) {
+func (s *s3Storage) GetSignedUrl(ctx context.Context, filePath string, ttl time.Duration) (string, error) {
 	signed, err := s.presignClient.PresignGetObject(ctx, &s3.GetObjectInput{
 		Bucket: &s.bucketName,
 		Key:    &filePath,

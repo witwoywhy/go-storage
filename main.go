@@ -42,7 +42,7 @@ func getUrl(key string) {
 func getSignedUrl(key string) {
 	store := storage.Init(key)
 
-	r, e := store.GetSingedUrl(context.Background(), "cats/cat.jpg", 1*time.Hour)
+	r, e := store.GetSignedUrl(context.Background(), "cats/cat.jpg", 1*time.Hour)
 	must(e)
 
 	fmt.Println(r)
@@ -55,5 +55,5 @@ func delete(key string) {
 }
 
 func main() {
-
+	delete("storage.gcp-public")
 }
