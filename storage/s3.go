@@ -68,7 +68,7 @@ func (s *s3Storage) Upload(ctx context.Context, request *UploadRequest) error {
 }
 
 func (s *s3Storage) GetUrl(filePath string) string {
-	return fmt.Sprintf("%s/%s", s.publicUrl, filePath)
+	return fmt.Sprintf("%s/%s/%s", s.publicUrl, s.bucketName, filePath)
 }
 
 func (s *s3Storage) GetSignedUrl(ctx context.Context, filePath string, ttl time.Duration) (string, error) {
